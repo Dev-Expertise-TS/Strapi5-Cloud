@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "airport_pickup_sendings",
+  "info": {
+    "singularName": "airport-pickup-sending",
+    "pluralName": "airport-pickup-sendings",
+    "displayName": "Airport pickup sending",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nation_code": {
+      "type": "string"
+    },
+    "nation_name_kr": {
+      "type": "string"
+    },
+    "nation_name_en": {
+      "type": "string"
+    },
+    "city_name_kr": {
+      "type": "string"
+    },
+    "city_name_en": {
+      "type": "string"
+    },
+    "airport_kr": {
+      "type": "string"
+    },
+    "airport_en": {
+      "type": "string"
+    },
+    "iata": {
+      "type": "string"
+    },
+    "ref_location": {
+      "type": "string"
+    },
+    "car_type": {
+      "type": "string"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "duration": {
+      "type": "integer"
+    }
+  }
+}
