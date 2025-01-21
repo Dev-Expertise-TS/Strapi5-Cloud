@@ -1,5 +1,5 @@
 {
-  "name": "my-app-name",
+  "name": "strapi-5-cloud",
   "version": "0.1.0",
   "private": true,
   "description": "A Strapi application",
@@ -23,9 +23,17 @@
     "react-router-dom": "^6.0.0",
     "styled-components": "^6.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  },
   "engines": {
     "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "353a9704-15cf-4405-b2ca-171964b180df"
   }
 }
