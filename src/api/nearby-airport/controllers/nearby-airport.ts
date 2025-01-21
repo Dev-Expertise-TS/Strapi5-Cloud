@@ -3,15 +3,22 @@
  */
 
 export default {
-  getNearbyAirports: async (ctx) => {
+  getNearbyAirport: async (ctx) => {
     try {
-      const result = await strapi
-        .service("api::nearby-airport.nearby-airport")
-        .getNearbyAirports(ctx.query)
-      ctx.body = result
+      let results
+      const { city_name, hotel_name } = ctx.query
+      if (!city_name && !hotel_name) {
+        results = {}
+      } else {
+        results = await strapi
+          .service("api::nearby-airport.nearby-airport")
+          .getNearbyAirport(ctx.query)
+      }
+
+      ctx.send(results)
     } catch (err) {
-      ctx.body = err
-      ctx.badRequest("nearby-airport 컨트롤러에서 에러 발생", {
+      ctx.send(err)
+      ctx.badRequest("Error in `nearby-airport`", {
         moreDetails: err,
       })
     }

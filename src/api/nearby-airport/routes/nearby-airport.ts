@@ -3,7 +3,7 @@ export default {
     {
       method: "GET",
       path: "/nearby-airport",
-      handler: "nearby-airport.getNearbyAirports",
+      handler: "nearby-airport.getNearbyAirport",
       config: {
         policies: [],
         middlewares: [],

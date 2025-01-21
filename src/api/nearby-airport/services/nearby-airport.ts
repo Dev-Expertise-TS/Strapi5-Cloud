@@ -3,7 +3,7 @@
  */
 
 export default ({ strapi }) => ({
-  async getNearbyAirports(ctx) {
+  async getNearbyAirport(ctx) {
     const { city_name, hotel_name } = ctx
     const $or = city_name
       ? [
@@ -14,12 +14,12 @@ export default ({ strapi }) => ({
     const $and = hotel_name
       ? [{ ref_location: { $contains: hotel_name.toLowerCase() } }]
       : []
-    const entries = await strapi
+    const entry = await strapi
       .documents("api::airport-pickup-sending.airport-pickup-sending")
       .findFirst({
         filters: { $or, $and },
         fields: ["airport_kr", "airport_en", "iata"],
       })
-    return entries
+    return entry
   },
 })
