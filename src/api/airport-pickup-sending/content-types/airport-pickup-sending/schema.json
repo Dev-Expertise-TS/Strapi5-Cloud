@@ -47,6 +47,21 @@
     },
     "duration": {
       "type": "integer"
+    },
+    "car_name": {
+      "type": "string"
+    },
+    "number_passengers": {
+      "type": "integer"
+    },
+    "luggage": {
+      "type": "integer"
+    },
+    "wait_time_min": {
+      "type": "integer"
+    },
+    "notice": {
+      "type": "text"
     }
   }
 }

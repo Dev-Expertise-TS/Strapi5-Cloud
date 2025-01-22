@@ -384,6 +384,7 @@ export interface ApiAirportPickupSendingAirportPickupSending
   attributes: {
     airport_en: Schema.Attribute.String;
     airport_kr: Schema.Attribute.String;
+    car_name: Schema.Attribute.String;
     car_type: Schema.Attribute.String;
     city_name_en: Schema.Attribute.String;
     city_name_kr: Schema.Attribute.String;
@@ -398,15 +399,19 @@ export interface ApiAirportPickupSendingAirportPickupSending
       'api::airport-pickup-sending.airport-pickup-sending'
     > &
       Schema.Attribute.Private;
+    luggage: Schema.Attribute.Integer;
     nation_code: Schema.Attribute.String;
     nation_name_en: Schema.Attribute.String;
     nation_name_kr: Schema.Attribute.String;
+    notice: Schema.Attribute.Text;
+    number_passengers: Schema.Attribute.Integer;
     price: Schema.Attribute.BigInteger;
     publishedAt: Schema.Attribute.DateTime;
     ref_location: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    wait_time_min: Schema.Attribute.Integer;
   };
 }
 

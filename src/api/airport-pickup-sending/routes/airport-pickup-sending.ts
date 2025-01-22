@@ -1,7 +1,13 @@
-/**
- * airport-pickup-sending router
- */
-
-import { factories } from '@strapi/strapi';
-
-export default factories.createCoreRouter('api::airport-pickup-sending.airport-pickup-sending');
+export default {
+  routes: [
+    {
+      method: "GET",
+      path: "/airport-pickup-sending",
+      handler: "airport-pickup-sending.find",
+      config: {
+        policies: [],
+        middlewares: [],
+      },
+    },
+  ],
+}
